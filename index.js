@@ -37,4 +37,6 @@ UserRoutes(app);
 CourseRoutes(app);
 Lab5(app);
 
-app.listen(4000);
+// Change from hardcoded 4000 to use environment variable
+const PORT = process.env.PORT || 4000;
+app.listen(PORT);
