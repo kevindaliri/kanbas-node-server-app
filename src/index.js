@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 import session from "express-session";
-import Lab5 from "../Lab5/index.js";
-import UserRoutes from "./Kanbas/Users/routes.js";  // verify this path
-import CourseRoutes from "./src/Kanbas/Courses/routes.js";  // verify this path
+import Lab5 from "./Lab5/index.js";
+import UserRoutes from "./Kanbas/Users/routes.js";
+import CourseRoutes from "./Kanbas/Courses/routes.js";
 
 const app = express();
 

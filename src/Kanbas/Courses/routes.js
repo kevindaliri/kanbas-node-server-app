@@ -12,15 +12,14 @@ function CourseRoutes(app) {
   });
 
   app.delete("/api/courses/:courseId", (req, res) => {
-    const { courseId } = req.params;
-    dao.deleteCourse(courseId);
-    res.sendStatus(204);
+    const status = dao.deleteCourse(req.params.courseId);
+    res.json(status);
   });
 
   app.put("/api/courses/:courseId", (req, res) => {
     const { courseId } = req.params;
-    const course = dao.updateCourse(courseId, req.body);
-    res.json(course);
+    const status = dao.updateCourse(courseId, req.body);
+    res.json(status);
   });
 }
 
