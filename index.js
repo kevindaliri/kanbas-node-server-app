@@ -3,8 +3,8 @@ import cors from "cors";
 import "dotenv/config";
 import session from "express-session";
 import Lab5 from "./Lab5/index.js";
-import UserRoutes from "./Kanbas/Users/routes.js";
-import CourseRoutes from "./Kanbas/Courses/routes.js";
+import UserRoutes from "./Kanbas/Users/routes.js";  // verify this path
+import CourseRoutes from "./Kanbas/Courses/routes.js";  // verify this path
 
 const app = express();
 
@@ -37,6 +37,5 @@ UserRoutes(app);
 CourseRoutes(app);
 Lab5(app);
 
-// Change from hardcoded 4000 to use environment variable
 const PORT = process.env.PORT || 4000;
 app.listen(PORT);
